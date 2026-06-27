@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Security -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://cdn.jsdelivr.net;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+    font-src 'self' https://fonts.gstatic.com;
+    img-src 'self' data:;
+    connect-src 'self' https://api.emailjs.com;
+    form-action 'self';
+    base-uri 'self';
+    object-src 'none';
+    frame-ancestors 'none';
+  " />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- SEO -->
+  <title>Loudy Miguel Torrejas — Entrepreneur & Programmer</title>
+  <meta name="description" content="Loudy Miguel Torrejas — Entrepreneur and programmer from Bohol, Philippines. Building robotics, computer vision, embedded systems and mobile apps. Innovate today for a better tomorrow." />
+  <meta name="author" content="Loudy Miguel Torrejas" />
+  <meta name="keywords" content="Loudy Miguel Torrejas, robotics, ROS2, computer vision, YOLO, embedded systems, ESP32, Flutter, programmer, Bohol Philippines" />
+  <meta name="theme-color" content="#0a0c0a" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Loudy Miguel Torrejas — Entrepreneur & Programmer" />
+  <meta property="og:description" content="Robotics · Computer Vision · Embedded · Mobile. Innovate today for a better tomorrow." />
+  <meta property="og:image" content="assets/images/trashBot.jpg" />
+  <meta property="og:url" content="https://loudymiguel.github.io" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23c6f84a'/%3E%3Ctext x='50' y='68' font-family='monospace' font-size='52' font-weight='bold' text-anchor='middle' fill='%230a0c0a'%3EL%3C/text%3E%3C/svg%3E" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind (utility layout) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="css/style.css?v=11" />
+</head>
+<body>
+
+  <!-- Atmosphere -->
+  <div class="bg-aurora"></div>
+  <div class="bg-grid"></div>
+  <div class="bg-grain"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ===================== NAV ===================== -->
+  <nav class="nav" id="nav">
+    <div class="wrap nav-inner">
+      <a href="#home" class="brand">
+        <span class="mono-mark">LT</span>
+        <span class="brand-name">Loudy Torrejas<small>// ENTREPRENEUR · PROGRAMMER</small></span>
+      </a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#certs">Certifications</a>
+        <a href="#contact" class="nav-cta"><span class="btn btn-primary" style="padding:9px 16px;">Get in touch</span></a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about"><span>01</span> About</a>
+    <a href="#projects"><span>02</span> Projects</a>
+    <a href="#certs"><span>03</span> Certifications</a>
+    <a href="#contact"><span>04</span> Contact</a>
+  </div>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="hero-kicker reveal"><span class="pulse"></span> AVAILABLE FOR BUILDS &amp; COLLABS</span>
+        <h1 class="hero-title">
+          <span class="line"><span class="line-i">Building robots,</span></span>
+          <span class="line"><span class="line-i grad">vision &amp; ideas</span></span>
+          <span class="line"><span class="line-i">into reality.</span></span>
+        </h1>
+        <p class="hero-tag reveal" data-d="2">
+          I'm <b>Loudy Miguel Torrejas</b> — an entrepreneur and programmer crafting
+          autonomous robots, computer-vision systems, embedded hardware and mobile apps.
+        </p>
+        <div class="hero-meta reveal" data-d="2">
+          <span>📍 Bohol, Philippines</span>
+          <span>⚙ Robotics · CV · Embedded</span>
+        </div>
+        <div class="hero-cta reveal" data-d="3">
+          <a href="#projects" class="btn btn-primary">
+            View my work
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-ghost">Let's talk</a>
+          <a href="assets/docs/Loudy_Miguel_Torrejas_Resume.docx" download class="btn btn-ghost">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l4-4m-4 4l-4-4M5 21h14"/></svg>
+            Resume
+          </a>
+        </div>
+        <div class="hero-stats reveal" data-d="4">
+          <div class="stat glass"><div class="num" data-val="05">05</div><div class="lbl">Featured projects</div></div>
+          <div class="stat glass"><div class="num" data-val="10">10</div><div class="lbl">Certifications</div></div>
+          <div class="stat glass"><div class="num" data-val="20+">20+</div><div class="lbl">Technologies</div></div>
+        </div>
+      </div>
+
+      <div class="hero-side reveal" data-d="3">
+        <div class="float-card glass">SYSTEM: <b>ONLINE</b></div>
+        <div class="portrait">
+          <span class="corner c-tl"></span>
+          <span class="corner c-br"></span>
+          <!-- Swap this monogram for a profile photo: replace with <img src="assets/images/profile.jpg" ... /> -->
+          <span class="monogram">LMT</span>
+          <div class="status-chip glass">
+            <span>loc: bohol_ph</span>
+            <span class="ok"><span class="pulse"></span> ready</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== MARQUEE ===================== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="marquee-item">ROS2</span><span class="marquee-item">Computer Vision</span><span class="marquee-item">YOLOv8</span><span class="marquee-item">Embedded Systems</span><span class="marquee-item">Flutter</span><span class="marquee-item">Python</span><span class="marquee-item">SLAM</span><span class="marquee-item">ESP32</span><span class="marquee-item">OpenCV</span><span class="marquee-item">Robotics</span>
+      <span class="marquee-item">ROS2</span><span class="marquee-item">Computer Vision</span><span class="marquee-item">YOLOv8</span><span class="marquee-item">Embedded Systems</span><span class="marquee-item">Flutter</span><span class="marquee-item">Python</span><span class="marquee-item">SLAM</span><span class="marquee-item">ESP32</span><span class="marquee-item">OpenCV</span><span class="marquee-item">Robotics</span>
+    </div>
+  </div>
+
+  <!-- ===================== ABOUT + SKILLS ===================== -->
+  <section id="about">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <span class="eyebrow">01 — About</span>
+          <h2 class="section-title">Engineer at heart,<br><em>builder</em> by instinct.</h2>
+          <p>
+            Based in <b>Bohol, Philippines</b>, I work across the full stack of the physical
+            and digital — from <b>ROS2</b> robots that map and sort the world around them, to
+            <b>computer-vision</b> pipelines, <b>ESP32</b> hardware, and <b>Flutter</b> apps.
+          </p>
+          <p>
+            I like problems that span disciplines: a little mechanical, a little electrical,
+            and a lot of code. Each project is an experiment in turning a rough idea into
+            something that actually runs.
+          </p>
+          <blockquote class="about-quote">"Innovate today<br>for a <span>better tomorrow.</span>"</blockquote>
+        </div>
+
+        <div class="skills reveal" data-d="1">
+          <div class="skill-group glass">
+            <h4>Languages <span class="cnt">06</span></h4>
+            <div class="chips">
+              <span class="chip">Java</span><span class="chip">Python</span>
+              <span class="chip">C++ (Arduino)</span><span class="chip">JavaScript</span>
+              <span class="chip">Dart</span><span class="chip">Go (GoLang)</span>
+            </div>
+          </div>
+          <div class="skill-group glass">
+            <h4>Frameworks &amp; ML <span class="cnt">10</span></h4>
+            <div class="chips">
+              <span class="chip">OpenCV</span><span class="chip">Flask</span>
+              <span class="chip">Docker</span><span class="chip">JavaSwing</span>
+              <span class="chip">YOLO</span><span class="chip">TensorFlow</span>
+              <span class="chip">ROS2</span><span class="chip">Flutter</span>
+              <span class="chip">jQuery</span><span class="chip">Bootstrap</span>
+            </div>
+          </div>
+          <div class="skill-group glass">
+            <h4>Databases <span class="cnt">05</span></h4>
+            <div class="chips">
+              <span class="chip">MySQL</span><span class="chip">MongoDB</span>
+              <span class="chip">MariaDB</span><span class="chip">SQLite</span>
+              <span class="chip">PostgreSQL</span>
+            </div>
+          </div>
+          <div class="skill-group glass">
+            <h4>Tools <span class="cnt">04</span></h4>
+            <div class="chips">
+              <span class="chip">VS Code</span><span class="chip">Claude</span>
+              <span class="chip">Gemini</span><span class="chip">Cloudflare</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS ===================== -->
+  <section id="projects">
+    <div class="wrap">
+      <div class="proj-head">
+        <div class="reveal">
+          <span class="eyebrow">02 — Selected Work</span>
+          <h2 class="section-title">Things I've <em>built</em>.</h2>
+        </div>
+        <div class="filters reveal" data-d="1">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="robotics">Robotics</button>
+          <button class="filter" data-filter="vision">AI / Vision</button>
+          <button class="filter" data-filter="mobile">Mobile</button>
+          <button class="filter" data-filter="embedded">Embedded</button>
+        </div>
+      </div>
+
+      <div class="proj-grid">
+
+        <!-- TrashBot -->
+        <article class="proj-card glass reveal" data-cat="robotics vision">
+          <div class="proj-media">
+            <span class="badge">Robotics</span>
+            <span class="proj-date">May–Jun 2026</span>
+            <img src="assets/images/trashBot.jpg" alt="TrashBot — autonomous trash picking and sorting robot" loading="lazy" />
+          </div>
+          <div class="proj-body">
+            <h3>TrashBot</h3>
+            <p>An autonomous robot that maps its surroundings with SLAM, detects litter using YOLOv8 computer vision, and uses a robotic arm to pick and sort trash by type — all monitored through a custom Flutter control panel.</p>
+            <div class="tech-row">
+              <span class="tech">ROS2</span><span class="tech">SLAM</span><span class="tech">YOLOv8</span>
+              <span class="tech">Raspberry Pi</span><span class="tech">Arduino</span><span class="tech">Flutter</span>
+            </div>
+            <div class="proj-links">
+              <a class="proj-link" href="https://drive.google.com/file/d/1xjxP0LqRe0Q64_qzSCQFIf5gj9nV75yq/view?usp=drive_link" target="_blank" rel="noopener">
+                <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l4-4m-4 4l-4-4M5 21h14"/></svg>
+                Control panel (APK)
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- TimeMachine -->
+        <article class="proj-card glass reveal" data-d="1" data-cat="mobile vision">
+          <div class="proj-media">
+            <span class="badge">Mobile</span>
+            <span class="proj-date">Nov 2025–Jan 2026</span>
+            <img src="assets/images/TimeMachineLogo.png" alt="TimeMachine — time management app" loading="lazy" style="object-fit:contain;background:#0e120e;padding:18px;" />
+          </div>
+          <div class="proj-body">
+            <h3>TimeMachine</h3>
+            <p>A time-management platform that automates your schedule using computer vision, paired with fully customizable alarm tones. Designed to make managing your day effortless and a little more personal.</p>
+            <div class="tech-row">
+              <span class="tech">Flutter</span><span class="tech">Dart</span>
+              <span class="tech">Kotlin</span><span class="tech">Android</span>
+            </div>
+            <div class="proj-links">
+              <a class="proj-link" href="https://drive.google.com/file/d/1wFNd0Q9b1ta7yA9eFSdJ7w5vjI11BKno/view?usp=drive_link" target="_blank" rel="noopener">
+                <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l4-4m-4 4l-4-4M5 21h14"/></svg>
+                Download (APK)
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Market Flow -->
+        <article class="proj-card glass reveal" data-d="2" data-cat="mobile">
+          <div class="proj-media">
+            <span class="badge">Cross-platform</span>
+            <img src="assets/images/market%20flow.PNG" alt="Market Flow — cross-platform e-commerce marketplace" loading="lazy" />
+          </div>
+          <div class="proj-body">
+            <h3>Market Flow</h3>
+            <p>A cross-platform e-commerce marketplace built with Flutter — one codebase running on Android, iOS, desktop and web. Beyond the usual marketplace essentials, it layers on features designed to solve real buyer and seller pain points.</p>
+            <div class="tech-row">
+              <span class="tech">Flutter</span><span class="tech">Dart</span><span class="tech">Go (Server)</span>
+              <span class="tech">Cloudflare Tunnel</span><span class="tech">iOS</span>
+              <span class="tech">Android</span><span class="tech">Desktop</span>
+            </div>
+            <div class="proj-links">
+              <span class="proj-link" style="opacity:.6;cursor:default;">In development</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Paper Checker -->
+        <article class="proj-card glass reveal" data-d="3" data-cat="vision">
+          <div class="proj-media">
+            <span class="badge">AI / Vision</span>
+            <img src="assets/images/Paper%20Checker.PNG" alt="Paper Checker — automated answer-sheet grading" loading="lazy" />
+          </div>
+          <div class="proj-body">
+            <h3>Paper Checker</h3>
+            <p>An automated grading system that checks students' answer sheets with OpenCV, then visualizes results through interactive charts — cutting hours of manual checking down to seconds.</p>
+            <div class="tech-row">
+              <span class="tech">OpenCV</span><span class="tech">Python</span><span class="tech">Flask</span>
+              <span class="tech">Google Charts</span><span class="tech">HTML/CSS/JS</span>
+            </div>
+            <div class="proj-links">
+              <span class="proj-link" style="opacity:.6;cursor:default;">Demo coming soon</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Hybrid Scientific Calculator -->
+        <article class="proj-card glass reveal" data-d="3" data-cat="embedded">
+          <div class="proj-media">
+            <span class="badge">Embedded</span>
+            <img src="assets/images/esp_scientific_calc.jpeg" alt="Hybrid Scientific Calculator built on ESP32" loading="lazy" />
+          </div>
+          <div class="proj-body">
+            <h3>Hybrid Scientific Calculator</h3>
+            <p>An ESP32-powered calculator that goes beyond a standard scientific unit — binary, hex and octal math, scientific functions, unit and pattern-recognition conversion, plus a built-in dino game for good measure.</p>
+            <div class="tech-row">
+              <span class="tech">ESP32</span><span class="tech">Arduino</span><span class="tech">C++</span>
+            </div>
+            <div class="proj-links">
+              <span class="proj-link" style="opacity:.6;cursor:default;">Hardware project</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- More projects (curated selection hint) -->
+        <a class="proj-card proj-more glass reveal" href="https://github.com/LoudyMiguel" target="_blank" rel="noopener" data-cat="robotics vision mobile embedded">
+          <div class="proj-more-inner">
+            <span class="proj-more-plus">+</span>
+            <h3>And plenty more</h3>
+            <p>This is just a curated selection. There are more projects and experiments I haven't shown here — the rest live on my GitHub.</p>
+            <span class="proj-link" style="border-color:var(--accent);color:var(--accent);">Browse all on GitHub →</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CERTIFICATIONS ===================== -->
+  <section id="certs">
+    <div class="wrap">
+      <div class="reveal" style="margin-bottom:40px;">
+        <span class="eyebrow">03 — Credentials</span>
+        <h2 class="section-title">Certifications &amp; <em>learning</em>.</h2>
+        <p class="section-lead">Ten certifications across AI, security, databases and web development. Tap any card to view the full certificate.</p>
+      </div>
+
+      <div class="cert-grid" id="certGrid">
+        <!-- cards injected by JS for clean maintenance -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">×</button>
+    <img id="lightboxImg" src="" alt="Certificate" />
+    <div class="lightbox-cap" id="lightboxCap"></div>
+  </div>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="contact-aside reveal">
+          <span class="eyebrow">04 — Contact</span>
+          <h2 class="section-title">Let's build<br><em>something</em>.</h2>
+          <p>Have an idea, a project, or just want to say hi? Drop a message and I'll get back to you.</p>
+          <div class="contact-list">
+            <a class="contact-item glass" href="mailto:loudymigueltorrejas2023@gmail.com">
+              <span class="ci-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+              <span><span class="ci-label">Email</span><span class="ci-val">loudymigueltorrejas2023@gmail.com</span></span>
+            </a>
+            <a class="contact-item glass" href="https://github.com/LoudyMiguel" target="_blank" rel="noopener">
+              <span class="ci-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.57 2.34 1.12 2.91.85.09-.66.35-1.12.63-1.38-2.22-.26-4.55-1.14-4.55-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg></span>
+              <span><span class="ci-label">GitHub</span><span class="ci-val">github.com/LoudyMiguel</span></span>
+            </a>
+            <a class="contact-item glass" href="https://linkedin.com/in/loudy-miguel-torrejas-a10a59416" target="_blank" rel="noopener">
+              <span class="ci-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0-.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21H21v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H13z"/></svg></span>
+              <span><span class="ci-label">LinkedIn</span><span class="ci-val">loudy-miguel-torrejas</span></span>
+            </a>
+            <div class="contact-item glass">
+              <span class="ci-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+              <span><span class="ci-label">Location</span><span class="ci-val">Bohol, Philippines</span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-card glass reveal" data-d="1">
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="field">
+                <label for="from_name">Your name</label>
+                <input type="text" id="from_name" name="from_name" required maxlength="80" autocomplete="name" placeholder="Jane Doe" />
+              </div>
+              <div class="field">
+                <label for="reply_to">Email</label>
+                <input type="email" id="reply_to" name="reply_to" required maxlength="120" autocomplete="email" placeholder="jane@email.com" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required maxlength="120" autocomplete="off" placeholder="Project collaboration" />
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required maxlength="2000" placeholder="Tell me about your idea..."></textarea>
+            </div>
+
+            <!-- Honeypot: hidden from humans; bots fill it and get silently rejected -->
+            <div class="hp-field" aria-hidden="true">
+              <label for="hp_company">Company (leave empty)</label>
+              <input type="text" id="hp_company" name="hp_company" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <button type="submit" class="btn btn-primary submit-btn" id="submitBtn">
+              Send message
+              <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </button>
+            <p class="form-note">Or email me directly at loudymigueltorrejas2023@gmail.com</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="wrap foot-inner">
+      <div class="copy">© <span id="year"></span> <b>Loudy Miguel Torrejas</b> — built with caffeine &amp; code.</div>
+      <div class="socials">
+        <a href="https://github.com/LoudyMiguel" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.57 2.34 1.12 2.91.85.09-.66.35-1.12.63-1.38-2.22-.26-4.55-1.14-4.55-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg></a>
+        <a href="https://linkedin.com/in/loudy-miguel-torrejas-a10a59416" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0-.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21H21v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H13z"/></svg></a>
+        <a href="mailto:loudymigueltorrejas2023@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <!-- GSAP animation engine -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="js/main.js?v=11"></script>
+</body>
+</html>
